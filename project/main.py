@@ -1,121 +1,242 @@
-import time
 import os
-from langchain.tools import tool
-from langchain_ollama import ChatOllama
-from langgraph.checkpoint.memory import InMemorySaver
-from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, AIMessageChunk
-from langchain.agents import create_agent
-from pydantic import BaseModel, Field
-from typing import List, Literal
 import json
-import uuid
-import textwrap
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputClassifier
+
+from langchain_ollama import ChatOllama
 
 
-## Config:
+# =========================================================
+# CONFIG
+# =========================================================
+
 MODEL_NAME = "translategemma"
-TEMPERATURE = 0.2  # Set to 0 for strict data tasks
-REASONING = False  # Set to True to enable <think> blocks
-# SYSTEM_MESSAGE is in --AGENT INITIALIZATION-- section
+TEMPERATURE = 0
+
 DATA_FOLDER = "Dictionary"
+WORD_DATA_FILE = "word_data.json"
 
 
-# --- Classes ---
- 
-# --- TOOLS ---
-def load_dictionary(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        # Filter out the lines and empty spaces
-        return {line.strip().lower() for line in f if line.strip()}
+# =========================================================
+# LOAD DATA
+# =========================================================
 
-pl_path = os.path.join(DATA_FOLDER, "polski pl 10000.txt")
-en_path = os.path.join(DATA_FOLDER, "english uk 5000.txt")
-polish_words = load_dictionary(pl_path)
-english_words = load_dictionary(en_path)
+word_data_path = os.path.join(DATA_FOLDER, WORD_DATA_FILE)
 
-@tool
-def dictionary_lookup(word: str, direction: Literal["pl_to_en", "en_to_pl"]) -> str:
-    """Looks up a word in the local dictionary files to verify its existence."""
-    word = word.lower()
-    
-    if direction == "pl_to_en":
-        exists = word in polish_words
-        status = "is in the approved Polish list" if exists else "is NOT in the approved list"
+with open(word_data_path, "r", encoding="utf-8") as f:
+    word_data = json.load(f)
+
+
+# =========================================================
+# PREPARE TRAINING DATA FOR CATEGORY CLASSIFIER
+# =========================================================
+
+X_category_train = []
+y_category_train = []
+
+for polish_word, data in word_data.items():
+    translation = data["translation"].lower()
+    categories = data["categories"]
+
+    X_category_train.append(polish_word.lower())
+    y_category_train.append(categories)
+
+    X_category_train.append(translation)
+    y_category_train.append(categories)
+
+
+# =========================================================
+# TRAIN CATEGORY MLP CLASSIFIER
+# =========================================================
+
+category_binarizer = MultiLabelBinarizer()
+Y_category_train = category_binarizer.fit_transform(y_category_train)
+
+category_classifier = Pipeline([
+    (
+        "tfidf",
+        TfidfVectorizer(
+            analyzer="char",
+            ngram_range=(2, 4)
+        )
+    ),
+    (
+        "mlp",
+        MultiOutputClassifier(
+            MLPClassifier(
+                hidden_layer_sizes=(64, 32),
+                activation="relu",
+                max_iter=1000,
+                random_state=42
+            )
+        )
+    )
+])
+
+category_classifier.fit(X_category_train, Y_category_train)
+
+
+# =========================================================
+# PREPARE TRAINING DATA FOR LANGUAGE CLASSIFIER
+# =========================================================
+
+X_language_train = []
+y_language_train = []
+
+for polish_word, data in word_data.items():
+    X_language_train.append(polish_word.lower())
+    y_language_train.append("pl")
+
+    X_language_train.append(data["translation"].lower())
+    y_language_train.append("en")
+
+
+# =========================================================
+# TRAIN LANGUAGE MLP CLASSIFIER
+# =========================================================
+
+language_classifier = Pipeline([
+    (
+        "tfidf",
+        TfidfVectorizer(
+            analyzer="char",
+            ngram_range=(2, 4)
+        )
+    ),
+    (
+        "mlp",
+        MLPClassifier(
+            hidden_layer_sizes=(32,),
+            activation="relu",
+            max_iter=1000,
+            random_state=42
+        )
+    )
+])
+
+language_classifier.fit(X_language_train, y_language_train)
+
+
+# =========================================================
+# LLM
+# =========================================================
+
+llm = ChatOllama(
+    model=MODEL_NAME,
+    temperature=TEMPERATURE
+)
+
+
+# =========================================================
+# FUNCTIONS
+# =========================================================
+
+def detect_language(word):
+    word = word.lower().strip()
+    return language_classifier.predict([word])[0]
+
+
+def translate_word(word, language):
+    word = word.lower().strip()
+
+    if language == "pl":
+        if word in word_data:
+            return word_data[word]["translation"]
+
+    if language == "en":
+        for polish_word, data in word_data.items():
+            if data["translation"].lower() == word:
+                return polish_word
+
+    if language == "pl":
+        prompt = f"""
+Translate this Polish word to English.
+Return only the translation.
+Do not add explanation.
+
+Word: {word}
+"""
     else:
-        exists = word in english_words
-        status = "is in the approved English list" if exists else "is NOT in the approved list"
-        
-    return f"The word '{word}' {status}. Please provide the most natural translation based on this verification."
+        prompt = f"""
+Translate this English word to Polish.
+Return only the translation.
+Do not add explanation.
 
-# --- AGENT INITIALIZATION ---
-SYSTEM_MESSAGE = """You are a professional linguistic assistant. 
-Your goal is to translate words between source and target language.
-Produce only the target language translation, without any additional explanations or commentary.
-
+Word: {word}
 """
 
-def get_agent():
-    # ChatOllama supports structured_output via constrained decoding
-    llm = ChatOllama(
-        model=MODEL_NAME, 
-        temperature=TEMPERATURE,
-        reasoning=REASONING,
-        # format="json" # Instructs Ollama to use JSON mode
-    )
-    memory = InMemorySaver()
-    # In LangChain, passing response_format ensures the agent returns a typed object
-    agent = create_agent(
-        llm, 
-        # tools=[dictionary_lookup],    # translategemma does not support tools
-        system_prompt=SYSTEM_MESSAGE, 
-        checkpointer=memory,
-    )
-    return agent
+    response = llm.invoke(prompt)
+    return response.content.strip()
 
 
-# --- EXECUTION ---
+def predict_categories(word):
+    word = word.lower().strip()
+
+    prediction = category_classifier.predict([word])
+    categories = category_binarizer.inverse_transform(prediction)
+
+    if categories and len(categories[0]) > 0:
+        return list(categories[0])
+
+    return ["other"]
 
 
-def run_translator():
-    # 1. Initialize the agent
-    agent = get_agent()
-    
-    # 2. Set up a thread ID for the session memory
-    config = {"configurable": {"thread_id": str(uuid.uuid4())}}
-    
-    print("--- Local Dictionary Translator (Ollama) ---")
+def process_word(word):
+    word = word.lower().strip()
+
+    detected_language = detect_language(word)
+
+    if detected_language == "pl":
+        target_language = "en"
+    else:
+        target_language = "pl"
+
+    translation = translate_word(word, detected_language)
+    categories = predict_categories(word)
+
+    return {
+        "input_word": word,
+        "detected_language": detected_language,
+        "translation": translation,
+        "target_language": target_language,
+        "categories": categories
+    }
+
+
+# =========================================================
+# MAIN LOOP
+# =========================================================
+
+def main():
+    print("\n=== Translation And Categorization AI Project ===")
     print("Type 'exit' or 'quit' to stop.\n")
 
     while True:
         try:
-            # 3. Get user input
-            user_query = input("User >> ").strip()
-            
-            if user_query.lower() in ["exit", "quit"]:
+            user_input = input("User >> ").strip()
+
+            if user_input.lower() in ["exit", "quit"]:
                 break
-            
-            if not user_query:
+
+            if not user_input:
                 continue
 
-            # 4. Call the agent
-            # We use stream to see the reasoning steps or partial output
-            input_message = HumanMessage(content=user_query)
-            
-            # Using stream for LangGraph agents to handle tool outputs and reasoning
-            for event in agent.stream({"messages": [input_message]}, config):
-                for node_name, output in event.items():
-                    # If using JSON mode, the output might be structured
-                    # This prints the content of the last AIMessage generated
-                    if "messages" in output:
-                        last_msg = output["messages"][-1]
-                        if isinstance(last_msg, AIMessage):
-                            print(f"\nAI: {last_msg.content}")
-                            
+            result = process_word(user_input)
+
+            print("\nAI:")
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            print()
+
         except KeyboardInterrupt:
             break
+
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"\nError: {e}\n")
+
 
 if __name__ == "__main__":
-    run_translator()
-    
+    main()

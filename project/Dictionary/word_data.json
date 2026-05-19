@@ -1,0 +1,522 @@
+{
+  "kot": {
+    "translation": "cat",
+    "categories": ["animal"]
+  },
+  "pies": {
+    "translation": "dog",
+    "categories": ["animal"]
+  },
+  "jeleń": {
+    "translation": "deer",
+    "categories": ["animal"]
+  },
+  "krowa": {
+    "translation": "cow",
+    "categories": ["animal", "food"]
+  },
+  "świnia": {
+    "translation": "pig",
+    "categories": ["animal", "food"]
+  },
+  "koń": {
+    "translation": "horse",
+    "categories": ["animal"]
+  },
+  "owca": {
+    "translation": "sheep",
+    "categories": ["animal", "food"]
+  },
+  "kura": {
+    "translation": "chicken",
+    "categories": ["animal", "food"]
+  },
+  "kaczka": {
+    "translation": "duck",
+    "categories": ["animal", "food"]
+  },
+  "gęś": {
+    "translation": "goose",
+    "categories": ["animal", "food"]
+  },
+  "lew": {
+    "translation": "lion",
+    "categories": ["animal"]
+  },
+  "tygrys": {
+    "translation": "tiger",
+    "categories": ["animal"]
+  },
+  "wilk": {
+    "translation": "wolf",
+    "categories": ["animal"]
+  },
+  "lis": {
+    "translation": "fox",
+    "categories": ["animal"]
+  },
+  "zając": {
+    "translation": "hare",
+    "categories": ["animal"]
+  },
+  "królik": {
+    "translation": "rabbit",
+    "categories": ["animal"]
+  },
+  "słoń": {
+    "translation": "elephant",
+    "categories": ["animal"]
+  },
+  "żyrafa": {
+    "translation": "giraffe",
+    "categories": ["animal"]
+  },
+  "małpa": {
+    "translation": "monkey",
+    "categories": ["animal"]
+  },
+  "niedźwiedź": {
+    "translation": "bear",
+    "categories": ["animal"]
+  },
+  "rekin": {
+    "translation": "shark",
+    "categories": ["animal"]
+  },
+  "delfin": {
+    "translation": "dolphin",
+    "categories": ["animal"]
+  },
+  "wieloryb": {
+    "translation": "whale",
+    "categories": ["animal"]
+  },
+  "krewetka": {
+    "translation": "shrimp",
+    "categories": ["animal", "food"]
+  },
+  "krab": {
+    "translation": "crab",
+    "categories": ["animal", "food"]
+  },
+  "homar": {
+    "translation": "lobster",
+    "categories": ["animal", "food"]
+  },
+  "jabłko": {
+    "translation": "apple",
+    "categories": ["food", "plant"]
+  },
+  "banan": {
+    "translation": "banana",
+    "categories": ["food", "plant"]
+  },
+  "gruszka": {
+    "translation": "pear",
+    "categories": ["food", "plant"]
+  },
+  "śliwka": {
+    "translation": "plum",
+    "categories": ["food", "plant"]
+  },
+  "wiśnia": {
+    "translation": "cherry",
+    "categories": ["food", "plant"]
+  },
+  "truskawka": {
+    "translation": "strawberry",
+    "categories": ["food", "plant"]
+  },
+  "malina": {
+    "translation": "raspberry",
+    "categories": ["food", "plant"]
+  },
+  "borówka": {
+    "translation": "blueberry",
+    "categories": ["food", "plant"]
+  },
+  "pomidor": {
+    "translation": "tomato",
+    "categories": ["food", "plant"]
+  },
+  "ogórek": {
+    "translation": "cucumber",
+    "categories": ["food", "plant"]
+  },
+  "ziemniak": {
+    "translation": "potato",
+    "categories": ["food", "plant"]
+  },
+  "marchewka": {
+    "translation": "carrot",
+    "categories": ["food", "plant"]
+  },
+  "cebula": {
+    "translation": "onion",
+    "categories": ["food", "plant"]
+  },
+  "czosnek": {
+    "translation": "garlic",
+    "categories": ["food", "plant"]
+  },
+  "sałata": {
+    "translation": "lettuce",
+    "categories": ["food", "plant"]
+  },
+  "kapusta": {
+    "translation": "cabbage",
+    "categories": ["food", "plant"]
+  },
+  "pizza": {
+    "translation": "pizza",
+    "categories": ["food"]
+  },
+  "hamburger": {
+    "translation": "hamburger",
+    "categories": ["food"]
+  },
+  "frytki": {
+    "translation": "fries",
+    "categories": ["food"]
+  },
+  "makaron": {
+    "translation": "pasta",
+    "categories": ["food"]
+  },
+  "ryż": {
+    "translation": "rice",
+    "categories": ["food"]
+  },
+  "ser": {
+    "translation": "cheese",
+    "categories": ["food"]
+  },
+  "masło": {
+    "translation": "butter",
+    "categories": ["food"]
+  },
+  "mleko": {
+    "translation": "milk",
+    "categories": ["food"]
+  },
+  "woda": {
+    "translation": "water",
+    "categories": ["nature"]
+  },
+  "ogień": {
+    "translation": "fire",
+    "categories": ["nature"]
+  },
+  "las": {
+    "translation": "forest",
+    "categories": ["nature", "place"]
+  },
+  "drzewo": {
+    "translation": "tree",
+    "categories": ["nature", "plant"]
+  },
+  "kwiat": {
+    "translation": "flower",
+    "categories": ["nature", "plant"]
+  },
+  "róża": {
+    "translation": "rose",
+    "categories": ["nature", "plant"]
+  },
+  "słońce": {
+    "translation": "sun",
+    "categories": ["nature"]
+  },
+  "księżyc": {
+    "translation": "moon",
+    "categories": ["nature"]
+  },
+  "deszcz": {
+    "translation": "rain",
+    "categories": ["nature"]
+  },
+  "śnieg": {
+    "translation": "snow",
+    "categories": ["nature"]
+  },
+  "burza": {
+    "translation": "storm",
+    "categories": ["nature"]
+  },
+  "wiatr": {
+    "translation": "wind",
+    "categories": ["nature"]
+  },
+  "góra": {
+    "translation": "mountain",
+    "categories": ["nature", "place"]
+  },
+  "jezioro": {
+    "translation": "lake",
+    "categories": ["nature", "place"]
+  },
+  "morze": {
+    "translation": "sea",
+    "categories": ["nature", "place"]
+  },
+  "ocean": {
+    "translation": "ocean",
+    "categories": ["nature", "place"]
+  },
+  "dom": {
+    "translation": "house",
+    "categories": ["place", "object"]
+  },
+  "mieszkanie": {
+    "translation": "apartment",
+    "categories": ["place"]
+  },
+  "miasto": {
+    "translation": "city",
+    "categories": ["place"]
+  },
+  "wieś": {
+    "translation": "village",
+    "categories": ["place"]
+  },
+  "szkoła": {
+    "translation": "school",
+    "categories": ["place"]
+  },
+  "uczelnia": {
+    "translation": "university",
+    "categories": ["place"]
+  },
+  "biblioteka": {
+    "translation": "library",
+    "categories": ["place"]
+  },
+  "szpital": {
+    "translation": "hospital",
+    "categories": ["place"]
+  },
+  "lotnisko": {
+    "translation": "airport",
+    "categories": ["place"]
+  },
+  "dworzec": {
+    "translation": "station",
+    "categories": ["place"]
+  },
+  "restauracja": {
+    "translation": "restaurant",
+    "categories": ["place", "food"]
+  },
+  "hotel": {
+    "translation": "hotel",
+    "categories": ["place"]
+  },
+  "komputer": {
+    "translation": "computer",
+    "categories": ["technology", "object"]
+  },
+  "telefon": {
+    "translation": "phone",
+    "categories": ["technology", "object"]
+  },
+  "tablet": {
+    "translation": "tablet",
+    "categories": ["technology", "object"]
+  },
+  "monitor": {
+    "translation": "monitor",
+    "categories": ["technology", "object"]
+  },
+  "klawiatura": {
+    "translation": "keyboard",
+    "categories": ["technology", "object"]
+  },
+  "mysz": {
+    "translation": "mouse",
+    "categories": ["technology", "object"]
+  },
+  "internet": {
+    "translation": "internet",
+    "categories": ["technology"]
+  },
+  "program": {
+    "translation": "program",
+    "categories": ["technology"]
+  },
+  "algorytm": {
+    "translation": "algorithm",
+    "categories": ["technology"]
+  },
+  "robot": {
+    "translation": "robot",
+    "categories": ["technology"]
+  },
+  "samochód": {
+    "translation": "car",
+    "categories": ["object"]
+  },
+  "rower": {
+    "translation": "bicycle",
+    "categories": ["object"]
+  },
+  "motocykl": {
+    "translation": "motorcycle",
+    "categories": ["object"]
+  },
+  "autobus": {
+    "translation": "bus",
+    "categories": ["object"]
+  },
+  "pociąg": {
+    "translation": "train",
+    "categories": ["object"]
+  },
+  "samolot": {
+    "translation": "airplane",
+    "categories": ["object"]
+  },
+  "statek": {
+    "translation": "ship",
+    "categories": ["object"]
+  },
+  "książka": {
+    "translation": "book",
+    "categories": ["object"]
+  },
+  "zeszyt": {
+    "translation": "notebook",
+    "categories": ["object"]
+  },
+  "długopis": {
+    "translation": "pen",
+    "categories": ["object"]
+  },
+  "ołówek": {
+    "translation": "pencil",
+    "categories": ["object"]
+  },
+  "krzesło": {
+    "translation": "chair",
+    "categories": ["object"]
+  },
+  "stół": {
+    "translation": "table",
+    "categories": ["object"]
+  },
+  "łóżko": {
+    "translation": "bed",
+    "categories": ["object"]
+  },
+  "okno": {
+    "translation": "window",
+    "categories": ["object"]
+  },
+  "drzwi": {
+    "translation": "door",
+    "categories": ["object"]
+  },
+  "nauczyciel": {
+    "translation": "teacher",
+    "categories": ["person"]
+  },
+  "student": {
+    "translation": "student",
+    "categories": ["person"]
+  },
+  "uczeń": {
+    "translation": "pupil",
+    "categories": ["person"]
+  },
+  "lekarz": {
+    "translation": "doctor",
+    "categories": ["person"]
+  },
+  "pielęgniarka": {
+    "translation": "nurse",
+    "categories": ["person"]
+  },
+  "informatyk": {
+    "translation": "programmer",
+    "categories": ["person", "technology"]
+  },
+  "kierowca": {
+    "translation": "driver",
+    "categories": ["person"]
+  },
+  "kucharz": {
+    "translation": "cook",
+    "categories": ["person", "food"]
+  },
+  "policjant": {
+    "translation": "policeman",
+    "categories": ["person"]
+  },
+  "strażak": {
+    "translation": "firefighter",
+    "categories": ["person"]
+  },
+  "miłość": {
+    "translation": "love",
+    "categories": ["emotion"]
+  },
+  "radość": {
+    "translation": "joy",
+    "categories": ["emotion"]
+  },
+  "smutek": {
+    "translation": "sadness",
+    "categories": ["emotion"]
+  },
+  "strach": {
+    "translation": "fear",
+    "categories": ["emotion"]
+  },
+  "złość": {
+    "translation": "anger",
+    "categories": ["emotion"]
+  },
+  "szczęście": {
+    "translation": "happiness",
+    "categories": ["emotion"]
+  },
+  "biegać": {
+    "translation": "run",
+    "categories": ["action"]
+  },
+  "czytać": {
+    "translation": "read",
+    "categories": ["action"]
+  },
+  "pisać": {
+    "translation": "write",
+    "categories": ["action"]
+  },
+  "jeść": {
+    "translation": "eat",
+    "categories": ["action", "food"]
+  },
+  "pić": {
+    "translation": "drink",
+    "categories": ["action"]
+  },
+  "spać": {
+    "translation": "sleep",
+    "categories": ["action"]
+  },
+  "skakać": {
+    "translation": "jump",
+    "categories": ["action"]
+  },
+  "pływać": {
+    "translation": "swim",
+    "categories": ["action"]
+  },
+  "śpiewać": {
+    "translation": "sing",
+    "categories": ["action"]
+  },
+  "tańczyć": {
+    "translation": "dance",
+    "categories": ["action"]
+  }
+}
