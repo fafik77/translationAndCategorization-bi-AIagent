@@ -13,7 +13,7 @@ import textwrap
 
 
 ## Config:
-MODEL_NAME = "qwen3.5:4b"
+MODEL_NAME = "translategemma"
 TEMPERATURE = 0.2  # Set to 0 for strict data tasks
 REASONING = False  # Set to True to enable <think> blocks
 # SYSTEM_MESSAGE is in --AGENT INITIALIZATION-- section
@@ -49,13 +49,10 @@ def dictionary_lookup(word: str, direction: Literal["pl_to_en", "en_to_pl"]) -> 
 
 # --- AGENT INITIALIZATION ---
 SYSTEM_MESSAGE = """You are a professional linguistic assistant. 
-Your goal is to translate words between Polish and English.
+Your goal is to translate words between source and target language.
+Produce only the target language translation, without any additional explanations or commentary.
 
-RULES:
-1. Always use the `dictionary_lookup` tool to verify if the word exists in the provided vocabulary.
-2. If the word is in the dictionary, provide the translation and a short example sentence.
-3. If the word is NOT in the dictionary, mention it's 'Off-list' but provide the translation anyway using your internal knowledge.
-4. Keep the tone helpful and precise."""
+"""
 
 def get_agent():
     # ChatOllama supports structured_output via constrained decoding
@@ -69,7 +66,7 @@ def get_agent():
     # In LangChain, passing response_format ensures the agent returns a typed object
     agent = create_agent(
         llm, 
-        tools=[dictionary_lookup], 
+        # tools=[dictionary_lookup],    # translategemma does not support tools
         system_prompt=SYSTEM_MESSAGE, 
         checkpointer=memory,
     )
