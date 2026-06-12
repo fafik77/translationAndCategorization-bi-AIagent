@@ -518,5 +518,813 @@
   "tańczyć": {
     "translation": "dance",
     "categories": ["action"]
+  },
+  "orzeł": {
+    "translation": "eagle",
+    "categories": ["animal"]
+  },
+  "sowa": {
+    "translation": "owl",
+    "categories": ["animal"]
+  },
+  "bocian": {
+    "translation": "stork",
+    "categories": ["animal"]
+  },
+  "wróbel": {
+    "translation": "sparrow",
+    "categories": ["animal"]
+  },
+  "gołąb": {
+    "translation": "pigeon",
+    "categories": ["animal"]
+  },
+  "papuga": {
+    "translation": "parrot",
+    "categories": ["animal"]
+  },
+  "pingwin": {
+    "translation": "penguin",
+    "categories": ["animal"]
+  },
+  "łabędź": {
+    "translation": "swan",
+    "categories": ["animal"]
+  },
+  "żaba": {
+    "translation": "frog",
+    "categories": ["animal"]
+  },
+  "ropucha": {
+    "translation": "toad",
+    "categories": ["animal"]
+  },
+  "wąż": {
+    "translation": "snake",
+    "categories": ["animal"]
+  },
+  "jaszczurka": {
+    "translation": "lizard",
+    "categories": ["animal"]
+  },
+  "żółw": {
+    "translation": "turtle",
+    "categories": ["animal"]
+  },
+  "krokodyl": {
+    "translation": "crocodile",
+    "categories": ["animal"]
+  },
+  "mrówka": {
+    "translation": "ant",
+    "categories": ["animal"]
+  },
+  "pszczoła": {
+    "translation": "bee",
+    "categories": ["animal"]
+  },
+  "motyl": {
+    "translation": "butterfly",
+    "categories": ["animal"]
+  },
+  "pająk": {
+    "translation": "spider",
+    "categories": ["animal"]
+  },
+  "mucha": {
+    "translation": "fly",
+    "categories": ["animal"]
+  },
+  "komar": {
+    "translation": "mosquito",
+    "categories": ["animal"]
+  },
+  "tuńczyk": {
+    "translation": "tuna",
+    "categories": ["animal", "food"]
+  },
+  "łosoś": {
+    "translation": "salmon",
+    "categories": ["animal", "food"]
+  },
+  "dorsz": {
+    "translation": "cod",
+    "categories": ["animal", "food"]
+  },
+  "pstrąg": {
+    "translation": "trout",
+    "categories": ["animal", "food"]
+  },
+  "karp": {
+    "translation": "carp",
+    "categories": ["animal", "food"]
+  },
+  "wołowina": {
+    "translation": "beef",
+    "categories": ["food"]
+  },
+  "wieprzowina": {
+    "translation": "pork",
+    "categories": ["food"]
+  },
+  "kurczak": {
+    "translation": "chicken meat",
+    "categories": ["food"]
+  },
+  "jajko": {
+    "translation": "egg",
+    "categories": ["food"]
+  },
+  "chleb": {
+    "translation": "bread",
+    "categories": ["food"]
+  },
+  "bułka": {
+    "translation": "roll",
+    "categories": ["food"]
+  },
+  "ciasto": {
+    "translation": "cake",
+    "categories": ["food"]
+  },
+  "ciastko": {
+    "translation": "cookie",
+    "categories": ["food"]
+  },
+  "czekolada": {
+    "translation": "chocolate",
+    "categories": ["food"]
+  },
+  "cukier": {
+    "translation": "sugar",
+    "categories": ["food"]
+  },
+  "sól": {
+    "translation": "salt",
+    "categories": ["food"]
+  },
+  "pieprz": {
+    "translation": "pepper",
+    "categories": ["food", "plant"]
+  },
+  "olej": {
+    "translation": "oil",
+    "categories": ["food"]
+  },
+  "zupa": {
+    "translation": "soup",
+    "categories": ["food"]
+  },
+  "kanapka": {
+    "translation": "sandwich",
+    "categories": ["food"]
+  },
+  "sałatka": {
+    "translation": "salad",
+    "categories": ["food", "plant"]
+  },
+  "kawa": {
+    "translation": "coffee",
+    "categories": ["food", "plant"]
+  },
+  "herbata": {
+    "translation": "tea",
+    "categories": ["food", "plant"]
+  },
+  "sok": {
+    "translation": "juice",
+    "categories": ["food"]
+  },
+  "miód": {
+    "translation": "honey",
+    "categories": ["food"]
+  },
+  "jogurt": {
+    "translation": "yogurt",
+    "categories": ["food"]
+  },
+  "brzoskwinia": {
+    "translation": "peach",
+    "categories": ["food", "plant"]
+  },
+  "morela": {
+    "translation": "apricot",
+    "categories": ["food", "plant"]
+  },
+  "winogrono": {
+    "translation": "grape",
+    "categories": ["food", "plant"]
+  },
+  "pomarańcza": {
+    "translation": "orange",
+    "categories": ["food", "plant"]
+  },
+  "cytryna": {
+    "translation": "lemon",
+    "categories": ["food", "plant"]
+  },
+  "ananas": {
+    "translation": "pineapple",
+    "categories": ["food", "plant"]
+  },
+  "arbuz": {
+    "translation": "watermelon",
+    "categories": ["food", "plant"]
+  },
+  "dynia": {
+    "translation": "pumpkin",
+    "categories": ["food", "plant"]
+  },
+  "papryka": {
+    "translation": "bell pepper",
+    "categories": ["food", "plant"]
+  },
+  "brokuł": {
+    "translation": "broccoli",
+    "categories": ["food", "plant"]
+  },
+  "kalafior": {
+    "translation": "cauliflower",
+    "categories": ["food", "plant"]
+  },
+  "rzodkiewka": {
+    "translation": "radish",
+    "categories": ["food", "plant"]
+  },
+  "groch": {
+    "translation": "pea",
+    "categories": ["food", "plant"]
+  },
+  "fasola": {
+    "translation": "bean",
+    "categories": ["food", "plant"]
+  },
+  "pszenica": {
+    "translation": "wheat",
+    "categories": ["plant", "food"]
+  },
+  "żyto": {
+    "translation": "rye",
+    "categories": ["plant", "food"]
+  },
+  "owies": {
+    "translation": "oat",
+    "categories": ["plant", "food"]
+  },
+  "kukurydza": {
+    "translation": "corn",
+    "categories": ["plant", "food"]
+  },
+  "sosna": {
+    "translation": "pine",
+    "categories": ["plant", "nature"]
+  },
+  "dąb": {
+    "translation": "oak",
+    "categories": ["plant", "nature"]
+  },
+  "brzoza": {
+    "translation": "birch",
+    "categories": ["plant", "nature"]
+  },
+  "klon": {
+    "translation": "maple",
+    "categories": ["plant", "nature"]
+  },
+  "wierzba": {
+    "translation": "willow",
+    "categories": ["plant", "nature"]
+  },
+  "trawa": {
+    "translation": "grass",
+    "categories": ["plant", "nature"]
+  },
+  "mech": {
+    "translation": "moss",
+    "categories": ["plant", "nature"]
+  },
+  "paproć": {
+    "translation": "fern",
+    "categories": ["plant", "nature"]
+  },
+  "tulipan": {
+    "translation": "tulip",
+    "categories": ["plant", "nature"]
+  },
+  "stokrotka": {
+    "translation": "daisy",
+    "categories": ["plant", "nature"]
+  },
+  "las iglasty": {
+    "translation": "coniferous forest",
+    "categories": ["nature", "place", "plant"]
+  },
+  "rzeka": {
+    "translation": "river",
+    "categories": ["nature", "place"]
+  },
+  "strumień": {
+    "translation": "stream",
+    "categories": ["nature", "place"]
+  },
+  "wodospad": {
+    "translation": "waterfall",
+    "categories": ["nature", "place"]
+  },
+  "plaża": {
+    "translation": "beach",
+    "categories": ["nature", "place"]
+  },
+  "wyspa": {
+    "translation": "island",
+    "categories": ["nature", "place"]
+  },
+  "pustynia": {
+    "translation": "desert",
+    "categories": ["nature", "place"]
+  },
+  "dolina": {
+    "translation": "valley",
+    "categories": ["nature", "place"]
+  },
+  "łąka": {
+    "translation": "meadow",
+    "categories": ["nature", "place"]
+  },
+  "pole": {
+    "translation": "field",
+    "categories": ["nature", "place"]
+  },
+  "niebo": {
+    "translation": "sky",
+    "categories": ["nature"]
+  },
+  "chmura": {
+    "translation": "cloud",
+    "categories": ["nature"]
+  },
+  "mgła": {
+    "translation": "fog",
+    "categories": ["nature"]
+  },
+  "grad": {
+    "translation": "hail",
+    "categories": ["nature"]
+  },
+  "lód": {
+    "translation": "ice",
+    "categories": ["nature"]
+  },
+  "skała": {
+    "translation": "rock",
+    "categories": ["nature", "object"]
+  },
+  "piasek": {
+    "translation": "sand",
+    "categories": ["nature"]
+  },
+  "ziemia": {
+    "translation": "soil",
+    "categories": ["nature"]
+  },
+  "park": {
+    "translation": "park",
+    "categories": ["place", "nature"]
+  },
+  "ogród": {
+    "translation": "garden",
+    "categories": ["place", "nature", "plant"]
+  },
+  "sklep": {
+    "translation": "shop",
+    "categories": ["place"]
+  },
+  "supermarket": {
+    "translation": "supermarket",
+    "categories": ["place"]
+  },
+  "apteka": {
+    "translation": "pharmacy",
+    "categories": ["place"]
+  },
+  "bank": {
+    "translation": "bank",
+    "categories": ["place"]
+  },
+  "poczta": {
+    "translation": "post office",
+    "categories": ["place"]
+  },
+  "kino": {
+    "translation": "cinema",
+    "categories": ["place"]
+  },
+  "teatr": {
+    "translation": "theater",
+    "categories": ["place"]
+  },
+  "muzeum": {
+    "translation": "museum",
+    "categories": ["place"]
+  },
+  "kościół": {
+    "translation": "church",
+    "categories": ["place"]
+  },
+  "biuro": {
+    "translation": "office",
+    "categories": ["place"]
+  },
+  "fabryka": {
+    "translation": "factory",
+    "categories": ["place"]
+  },
+  "magazyn": {
+    "translation": "warehouse",
+    "categories": ["place"]
+  },
+  "stadion": {
+    "translation": "stadium",
+    "categories": ["place"]
+  },
+  "basen": {
+    "translation": "swimming pool",
+    "categories": ["place"]
+  },
+  "most": {
+    "translation": "bridge",
+    "categories": ["place", "object"]
+  },
+  "ulica": {
+    "translation": "street",
+    "categories": ["place"]
+  },
+  "plac": {
+    "translation": "square",
+    "categories": ["place"]
+  },
+  "droga": {
+    "translation": "road",
+    "categories": ["place"]
+  },
+  "laptop": {
+    "translation": "laptop",
+    "categories": ["technology", "object"]
+  },
+  "drukarka": {
+    "translation": "printer",
+    "categories": ["technology", "object"]
+  },
+  "skaner": {
+    "translation": "scanner",
+    "categories": ["technology", "object"]
+  },
+  "kamera": {
+    "translation": "camera",
+    "categories": ["technology", "object"]
+  },
+  "głośnik": {
+    "translation": "speaker",
+    "categories": ["technology", "object"]
+  },
+  "słuchawki": {
+    "translation": "headphones",
+    "categories": ["technology", "object"]
+  },
+  "mikrofon": {
+    "translation": "microphone",
+    "categories": ["technology", "object"]
+  },
+  "router": {
+    "translation": "router",
+    "categories": ["technology", "object"]
+  },
+  "serwer": {
+    "translation": "server",
+    "categories": ["technology"]
+  },
+  "baza danych": {
+    "translation": "database",
+    "categories": ["technology"]
+  },
+  "aplikacja": {
+    "translation": "application",
+    "categories": ["technology"]
+  },
+  "system": {
+    "translation": "system",
+    "categories": ["technology"]
+  },
+  "sieć": {
+    "translation": "network",
+    "categories": ["technology"]
+  },
+  "kod": {
+    "translation": "code",
+    "categories": ["technology"]
+  },
+  "programowanie": {
+    "translation": "programming",
+    "categories": ["technology", "action"]
+  },
+  "sztuczna inteligencja": {
+    "translation": "artificial intelligence",
+    "categories": ["technology"]
+  },
+  "model": {
+    "translation": "model",
+    "categories": ["technology", "object"]
+  },
+  "dane": {
+    "translation": "data",
+    "categories": ["technology"]
+  },
+  "plik": {
+    "translation": "file",
+    "categories": ["technology", "object"]
+  },
+  "folder": {
+    "translation": "folder",
+    "categories": ["technology", "object"]
+  },
+  "plecak": {
+    "translation": "backpack",
+    "categories": ["object"]
+  },
+  "torba": {
+    "translation": "bag",
+    "categories": ["object"]
+  },
+  "butelka": {
+    "translation": "bottle",
+    "categories": ["object"]
+  },
+  "kubek": {
+    "translation": "cup",
+    "categories": ["object"]
+  },
+  "talerz": {
+    "translation": "plate",
+    "categories": ["object"]
+  },
+  "widelec": {
+    "translation": "fork",
+    "categories": ["object"]
+  },
+  "łyżka": {
+    "translation": "spoon",
+    "categories": ["object"]
+  },
+  "nóż": {
+    "translation": "knife",
+    "categories": ["object"]
+  },
+  "garnek": {
+    "translation": "pot",
+    "categories": ["object"]
+  },
+  "patelnia": {
+    "translation": "pan",
+    "categories": ["object"]
+  },
+  "lampa": {
+    "translation": "lamp",
+    "categories": ["object"]
+  },
+  "zegar": {
+    "translation": "clock",
+    "categories": ["object"]
+  },
+  "lustro": {
+    "translation": "mirror",
+    "categories": ["object"]
+  },
+  "szafa": {
+    "translation": "wardrobe",
+    "categories": ["object"]
+  },
+  "półka": {
+    "translation": "shelf",
+    "categories": ["object"]
+  },
+  "dywan": {
+    "translation": "carpet",
+    "categories": ["object"]
+  },
+  "klucz": {
+    "translation": "key",
+    "categories": ["object"]
+  },
+  "portfel": {
+    "translation": "wallet",
+    "categories": ["object"]
+  },
+  "zegarek": {
+    "translation": "watch",
+    "categories": ["object"]
+  },
+  "okulary": {
+    "translation": "glasses",
+    "categories": ["object"]
+  },
+  "matka": {
+    "translation": "mother",
+    "categories": ["person"]
+  },
+  "ojciec": {
+    "translation": "father",
+    "categories": ["person"]
+  },
+  "dziecko": {
+    "translation": "child",
+    "categories": ["person"]
+  },
+  "brat": {
+    "translation": "brother",
+    "categories": ["person"]
+  },
+  "siostra": {
+    "translation": "sister",
+    "categories": ["person"]
+  },
+  "przyjaciel": {
+    "translation": "friend",
+    "categories": ["person"]
+  },
+  "sąsiad": {
+    "translation": "neighbor",
+    "categories": ["person"]
+  },
+  "pracownik": {
+    "translation": "employee",
+    "categories": ["person"]
+  },
+  "szef": {
+    "translation": "boss",
+    "categories": ["person"]
+  },
+  "artysta": {
+    "translation": "artist",
+    "categories": ["person"]
+  },
+  "muzyk": {
+    "translation": "musician",
+    "categories": ["person"]
+  },
+  "aktor": {
+    "translation": "actor",
+    "categories": ["person"]
+  },
+  "pisarz": {
+    "translation": "writer",
+    "categories": ["person"]
+  },
+  "sprzedawca": {
+    "translation": "seller",
+    "categories": ["person"]
+  },
+  "mechanik": {
+    "translation": "mechanic",
+    "categories": ["person"]
+  },
+  "inżynier": {
+    "translation": "engineer",
+    "categories": ["person", "technology"]
+  },
+  "naukowiec": {
+    "translation": "scientist",
+    "categories": ["person"]
+  },
+  "rolnik": {
+    "translation": "farmer",
+    "categories": ["person", "nature", "food"]
+  },
+  "sportowiec": {
+    "translation": "athlete",
+    "categories": ["person"]
+  },
+  "turysta": {
+    "translation": "tourist",
+    "categories": ["person"]
+  },
+  "nadzieja": {
+    "translation": "hope",
+    "categories": ["emotion"]
+  },
+  "duma": {
+    "translation": "pride",
+    "categories": ["emotion"]
+  },
+  "wstyd": {
+    "translation": "shame",
+    "categories": ["emotion"]
+  },
+  "zazdrość": {
+    "translation": "jealousy",
+    "categories": ["emotion"]
+  },
+  "spokój": {
+    "translation": "calm",
+    "categories": ["emotion"]
+  },
+  "stres": {
+    "translation": "stress",
+    "categories": ["emotion"]
+  },
+  "zdziwienie": {
+    "translation": "surprise",
+    "categories": ["emotion"]
+  },
+  "tęsknota": {
+    "translation": "longing",
+    "categories": ["emotion"]
+  },
+  "zachwyt": {
+    "translation": "delight",
+    "categories": ["emotion"]
+  },
+  "nuda": {
+    "translation": "boredom",
+    "categories": ["emotion"]
+  },
+  "iść": {
+    "translation": "walk",
+    "categories": ["action"]
+  },
+  "chodzić": {
+    "translation": "walk around",
+    "categories": ["action"]
+  },
+  "mówić": {
+    "translation": "speak",
+    "categories": ["action"]
+  },
+  "słuchać": {
+    "translation": "listen",
+    "categories": ["action"]
+  },
+  "patrzeć": {
+    "translation": "look",
+    "categories": ["action"]
+  },
+  "widzieć": {
+    "translation": "see",
+    "categories": ["action"]
+  },
+  "uczyć się": {
+    "translation": "learn",
+    "categories": ["action"]
+  },
+  "pracować": {
+    "translation": "work",
+    "categories": ["action"]
+  },
+  "gotować": {
+    "translation": "cook",
+    "categories": ["action", "food"]
+  },
+  "kupować": {
+    "translation": "buy",
+    "categories": ["action"]
+  },
+  "sprzedawać": {
+    "translation": "sell",
+    "categories": ["action"]
+  },
+  "otwierać": {
+    "translation": "open",
+    "categories": ["action"]
+  },
+  "zamykać": {
+    "translation": "close",
+    "categories": ["action"]
+  },
+  "budować": {
+    "translation": "build",
+    "categories": ["action"]
+  },
+  "naprawiać": {
+    "translation": "repair",
+    "categories": ["action"]
+  },
+  "rysować": {
+    "translation": "draw",
+    "categories": ["action"]
+  },
+  "malować": {
+    "translation": "paint",
+    "categories": ["action"]
+  },
+  "podróżować": {
+    "translation": "travel",
+    "categories": ["action"]
+  },
+  "prowadzić": {
+    "translation": "drive",
+    "categories": ["action"]
+  },
+  "myśleć": {
+    "translation": "think",
+    "categories": ["action"]
   }
 }
